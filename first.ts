@@ -5,7 +5,7 @@ const c: boolean = true;
 const d: undefined = undefined;
 const e: null = null;
 //? const f: symbol = Symbol.for('abc');
-//? const g: bigint = 1000000n; 이런것디 있다 정도
+//? const g: bigint = 1000000n; 이런것도 있다 정도
 const f: any = "123"; //* 걍 자바스크립트가 됨 타입스크립트의 주 목적은 any를 사용하지 않는것!이라고 생각하면 됨
 
 //* 마우스 올려서 타입잡혀있으면 굳이 타입 잡을 필요 없음;;

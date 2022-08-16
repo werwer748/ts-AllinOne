@@ -68,3 +68,27 @@ const hugo: Human = { breath: true, breed: true, think: true };
     enum은 E
 */
 //* 근데 요즘 잘 안씀
+
+/*
+? 타입을 집합으로 생각하기
+! any는 전체집합, never는 공집합 으로 생각하면 이해가 쉬움
+* type A = string | number; 집합 범위 : 넓음
+* type B = string; 집합 범위: 좁음
+
+* type C = string & number; 집합 범위: 더 좁음
+
+? 객체를 활용한 예시
+* type A = { name: string };
+* type B = { age: number };
+* type C = { name: string, age: number }; <- type C = A & B;
+! 누가 더 넓은 타입이고 누가 더 좁은 타입인가? A, B가 넓은 타입. 속성이 적을수록 넓다 속성이 구체적일수록 좁은 타입
+
+* type AB = A | B; |관계는 넓은 타입임
+? 예시
+* const ab: AB = { name: 'hugoK' }; 넓은 타입, 숫자만, 나이만 써도 됨 
+* const c: C = { name: 'hugo', age: 30 }; 좁은타입 숫자 나이 모두 써야함 c = ab가 성립되지 않는다. ab: AB = c 는 성립.
+? 타입범위 검사뿐만아니라 리터럴 검사(잉여 속성검사) 라는 걸 함
+* const c: C = { name: 'hugo', age: 30, married: true }; 했을 때 married에 빨간 줄(선언한 속성에 없음)
+* const obj = { name: 'hugo', age: 30, married: true };
+* const c: C = obj; 하면 먹힘
+*/
