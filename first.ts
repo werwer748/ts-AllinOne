@@ -65,6 +65,6 @@ try {
 
 //* !가 있음
 const head = document.querySelector("#head"); // 타입스크립트는 설명서
-head.innerHTML = "ddd";
+head!.innerHTML = "ddd";
 //? !의 역할 무조건 존재한다를 보증함 !가있으면 null이 없어짐
 //! 그러나 비추천... 절대는 존재할수 없다 대신 if (head) {...} 를 쓰자
