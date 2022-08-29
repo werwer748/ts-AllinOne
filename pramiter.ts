@@ -41,5 +41,5 @@ const cttp1 = new cttpClass('123', 456, true);
 type cttpType1 = ConstructorParameters<typeof cttpClass>; //? 튜플로 들어옴, class constructor의 파라미터 값. typeof 클래스가 생성자
 type itType1 = InstanceType<typeof cttpClass>; //? class가 그대로 들어옴
 
-//* Class는 타입으로 쓸 수 있다. (javascript가 되어도 사라지지 않는다 였음);
+//* Class는 타입으로 쓸 수 있다. (javascript가 되어도 사라지지 않는다 였음)
 const cttpC: cttpClass = new cttpClass('123', 456, false); //! 인스턴스(new)
